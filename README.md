@@ -82,7 +82,7 @@ Second, you'll need to create a MySQL database where Dejavu can store fingerprin
 	
 	$ mysql -u root -p
 	Enter password: **********
-	mysql> CREATE DATABASE IF NOT EXISTS dejavu;
+	mysql> CREATE DATABASE dejavu DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
 
 Now you're ready to start fingerprinting your audio collection! 
 

@@ -139,7 +139,7 @@ class SQLDatabase(Database):
 
     def __init__(self, **options):
         super(SQLDatabase, self).__init__()
-        self.cursor = cursor_factory(charset='utf8',**options)
+        self.cursor = cursor_factory(charset='utf8mb4',**options)
         self._options = options
 
     def after_fork(self):
@@ -155,7 +155,7 @@ class SQLDatabase(Database):
         fingerprints associated with them.
         """
         with self.cursor() as cur:
-            cur.execute('SET NAMES UTF8')
+            cur.execute('SET NAMES UTF8MB4')
             cur.execute(self.CREATE_SONGS_TABLE)
             cur.execute(self.CREATE_FINGERPRINTS_TABLE)
             cur.execute(self.DELETE_UNFINGERPRINTED)
