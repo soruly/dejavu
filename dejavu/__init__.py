@@ -175,7 +175,8 @@ def _fingerprint_worker(filename, limit=None, song_name=None):
     except ValueError:
         pass
 
-    songname, extension = os.path.splitext(os.path.basename(filename))
+    #songname, extension = os.path.splitext(os.path.basename(filename))
+    songname = filename
     song_name = song_name or songname
     channels, Fs, file_hash = decoder.read(filename, limit)
     result = set()
