@@ -19,7 +19,7 @@ DEFAULT_FS = 44100
 
 ######################################################################
 # Size of the FFT window, affects frequency granularity
-DEFAULT_WINDOW_SIZE = 4096
+DEFAULT_WINDOW_SIZE = 8820
 
 ######################################################################
 # Ratio by which each sequential window overlaps the last and the
@@ -30,7 +30,7 @@ DEFAULT_OVERLAP_RATIO = 0.5
 ######################################################################
 # Degree to which a fingerprint can be paired with its neighbors --
 # higher will cause more fingerprints, but potentially better accuracy.
-DEFAULT_FAN_VALUE = 15
+DEFAULT_FAN_VALUE = 5
 
 ######################################################################
 # Minimum amplitude in spectrogram in order to be considered a peak.
@@ -49,7 +49,7 @@ PEAK_NEIGHBORHOOD_SIZE = 20
 # to be paired as a fingerprint. If your max is too low, higher values of
 # DEFAULT_FAN_VALUE may not perform as expected.
 MIN_HASH_TIME_DELTA = 0
-MAX_HASH_TIME_DELTA = 200
+MAX_HASH_TIME_DELTA = 100
 
 ######################################################################
 # If True, will sort peaks temporally for fingerprinting;
