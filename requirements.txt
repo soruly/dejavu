@@ -1,7 +1,7 @@
 # requirements file
 
 ### BEGIN ###
-pydub>=0.9.4
+pydub>=0.25.1
 PyAudio>=0.2.7
 numpy>=1.8.2
 scipy>=0.12.1
